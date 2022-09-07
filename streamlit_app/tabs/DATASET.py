@@ -1,9 +1,6 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
-
-!pip install seaborn
 from PIL import Image
 
 import plotly.graph_objects as go
