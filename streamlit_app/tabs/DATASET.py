@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 title = "Projet Estimation de ventes e-commerce"
 sidebar_name = "DATASET"
 
-df = pd.read_csv("Pakistan Largest Ecommerce Dataset.csv")
+df = pd.read_csv("https://wetransfer.com/downloads/659bcf0aa3862ec2997f437463abcadc20220907142858/dfed41")
 
 def run():
     @st.cache
