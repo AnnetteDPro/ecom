@@ -3,8 +3,7 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 
-import plotly.graph_objects as go
-import seaborn as sns
+
 import matplotlib.pyplot as plt
 
 title = "Projet Estimation de ventes e-commerce"
