@@ -4,6 +4,10 @@ Config file for Streamlit App
 
 """
 
+[remote "origin"]
+    url = git@bitbucket.org:AnnetteDPro/ecom.git/streamlit_app.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+        
 from member import Member
 
 
