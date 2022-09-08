@@ -25,7 +25,7 @@ Pour le moment, cela reste des chiffres ou des informations brutes. La deuxième
         """)
     @st.cache
     def fin_data ():
-        df = pd.read_csv("Pakistan Largest Ecommerce Dataset.csv")
+        df = pd.read_csv("https://www.dropbox.com/s/4zy7dmd6dc9ccjo/Pakistan%20Largest%20Ecommerce%20Dataset.csv?dl=0")
 
 
       #suppression des lignes et des colonnes vides
