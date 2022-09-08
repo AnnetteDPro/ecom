@@ -8,12 +8,8 @@ import matplotlib.pyplot as plt
 
 title = "Projet Estimation de ventes e-commerce"
 sidebar_name = "DATASET"
-from google.colab import drive
-drive.mount('/content/drive')
-
-path = '/content/drive/MyDrive/Data analyste/Projet/Pakistan Largest Ecommerce Dataset.csv'
-
-df = pd.read_csv(path)
+from google.colab import files
+df= files.upload()
 
 
 def run():
