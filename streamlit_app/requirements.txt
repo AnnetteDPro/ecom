@@ -8,5 +8,6 @@ pandas
 Flask
 flask-cors
 pyforest
+google-colab
 
 
