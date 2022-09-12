@@ -28,7 +28,8 @@ Pour le moment, cela reste des chiffres ou des informations brutes. La deuxième
         
     import zipfile
     with zipfile.ZipFile("Pakistan Largest Ecommerce Dataset.csv.zip","python") as zip_ref:
-         zip_ref.extractall("df")
+         zip_ref.extractall()
+    df= pd.read_csv("Pakistan LargestEcommerceDataset.csv")
 
 
       #suppression des lignes et des colonnes vides
