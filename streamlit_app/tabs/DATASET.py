@@ -9,9 +9,13 @@ import matplotlib.pyplot as plt
 title = "Projet Estimation de ventes e-commerce"
 sidebar_name = "DATASET"
 
-import zipfile
-with zipfile.ZipFile("Pakistan Largest Ecommerce Dataset.csv.zip","python") as zip_ref:
-    zip_ref.extractall("df")
+
+from zipfile import ZipFile
+zf = ZipFile('tabs/Pakistan Largest Ecommerce Dataset.csv.zip', 'r')
+zf.extractall('')
+zf.close()
+
+    df= pd.read_csv("Pakistan LargestEcommerceDataset.csv")
 
 
 def run():
