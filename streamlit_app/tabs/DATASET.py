@@ -12,10 +12,10 @@ sidebar_name = "DATASET"
 
 from zipfile import ZipFile
 zf = ZipFile('tabs/Pakistan Largest Ecommerce Dataset.csv.zip', 'r')
-zf.extractall('')
+zf.extractall('tabs/Pakistan Largest Ecommerce Dataset.csv')
 zf.close()
 
-    df= pd.read_csv("Pakistan LargestEcommerceDataset.csv")
+df= pd.read_csv("Pakistan LargestEcommerceDataset.csv")
 
 
 def run():
