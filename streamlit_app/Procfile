@@ -1,2 +1,2 @@
-./setup.sh --update
+/setup.sh --update
 web: sh setup.sh && streamlit run app.py
