@@ -25,10 +25,12 @@ Pour le moment, cela reste des chiffres ou des informations brutes. La deuxième
         """)
     @st.cache
     def fin_data ():
-        
-    import zipfile
-    with zipfile.ZipFile("Pakistan Largest Ecommerce Dataset.csv.zip","python") as zip_ref:
-         zip_ref.extractall()
+    
+    from zipfile import ZipFile
+    zf = ZipFile('tabs/Pakistan Largest Ecommerce Dataset.csv.zip', 'r')
+    zf.extractall('')
+    zf.close()
+
     df= pd.read_csv("Pakistan LargestEcommerceDataset.csv")
 
 
