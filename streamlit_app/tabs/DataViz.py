@@ -26,12 +26,10 @@ Pour le moment, cela reste des chiffres ou des informations brutes. La deuxième
     @st.cache
     def fin_data ():
     
-    from zipfile import ZipFile
-    zf = ZipFile('tabs/Pakistan Largest Ecommerce Dataset.csv.zip', 'r')
-    zf.extractall('')
-    zf.close()
-
-    df= pd.read_csv("Pakistan LargestEcommerceDataset.csv")
+        from zipfile import ZipFile
+        zf = ZipFile('tabs/Pakistan Largest Ecommerce Dataset.csv.zip', 'r')
+        zf.extractall('tabs/Pakistan Largest Ecommerce Dataset.csv')
+        zf.close()
 
 
       #suppression des lignes et des colonnes vides
