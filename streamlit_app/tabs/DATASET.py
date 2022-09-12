@@ -11,8 +11,8 @@ sidebar_name = "DATASET"
 
 from zipfile import ZipFile
 
-with zipfile.ZipFile("Pakistan%20Largest%20Ecommerce%20Dataset.csv.zip", mode="r") as archive:
-...     df = archive.getinfo("Pakistan Largest Ecommerce Dataset.csv")
+with zipfile.ZipFile("Pakistan Largest Ecommerce Dataset.csv.zip", mode="r") as archive:
+     df = archive.getinfo("Pakistan Largest Ecommerce Dataset.csv")
 
 
 def run():
