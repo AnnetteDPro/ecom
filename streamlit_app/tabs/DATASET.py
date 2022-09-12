@@ -10,7 +10,7 @@ title = "Projet Estimation de ventes e-commerce"
 sidebar_name = "DATASET"
 
 from zipfile import ZipFile
-df =ZipFile("Pakistan Largest Ecommerce Dataset.csv.zip").extractall()
+df =ZipFile("https://github.com/AnnetteDPro/ecom/blob/main/streamlit_app/tabs/Pakistan%20Largest%20Ecommerce%20Dataset.csv.zip").extractall()
 
 
 
