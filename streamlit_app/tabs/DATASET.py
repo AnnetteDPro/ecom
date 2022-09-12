@@ -10,7 +10,7 @@ title = "Projet Estimation de ventes e-commerce"
 sidebar_name = "DATASET"
 
 import zipfile
-with zipfile.ZipFile("file.zip","python") as zip_ref:
+with zipfile.ZipFile("Pakistan Largest Ecommerce Dataset.csv.zip","python") as zip_ref:
     zip_ref.extractall("df")
 
 
