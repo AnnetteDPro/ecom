@@ -11,52 +11,10 @@ sidebar_name = "DATASET"
 
 import ZipFile
 
-with zipfile.ZipFile("Pakistan Largest Ecommerce Dataset.csv.zip", mode="r") as archive:
-     df = archive.getinfo("Pakistan Largest Ecommerce Dataset.csv")
+with zipfile.ZipFile("ecom_df_2.csv.zip", mode="r") as archive:
+     df = archive.getinfo("ecom_df_2.csv")
 
 
-def run():
-    @st.cache
-    def net_data ():
-           
-     #suppression des lignes et des colonnes vides
-        df = df.dropna(axis = 1, how = 'all')                                               #Suppression des colonnes avec des valeurs manquantes
-        df = df.dropna(axis = 0, how = 'all')                                               #Suppression des lignes avec des valeurs manquantes
-
-    #traitement de la colonne "status" 
-        df['status'] =  df['status'].fillna(df['status'].mode()[0]) 
-        df.status = df.status.replace({"\\N" : "complete"})
-
-    #traitement de la colonne "category_name_1"
-        df.category_name_1= df.category_name_1.replace({"\\N" : "Others"})                 #Remplacement dans la colonne category les /N par     category Others
-        df['category_name_1'].fillna(value = "Others", inplace = True)                      #Remplacement dans la colonne category les NaN par category Others
-        df['sku'].fillna(value = "Others", inplace = True)                                  #Remplacement dans la colonne sku les NaN par category Others
-
-#Remplacement dans la colonne sales_commission_code les NaN par No_code
-                                 
-        df.sales_commission_code = df.sales_commission_code.replace({"\\N" : "No_code"})    #Remplacement dans la colonne sales_commission_code les /N par No_code
-        df.sales_commission_code.fillna(('No_code'), inplace = True)
-
-
-#traitement de la colonne "Customer Since" et'Customer ID'
-        df['Customer Since'].fillna(df['Year']- df['Month'], inplace = True)                #Remplacement dans la colonne Customer Since les NaN par Year - Month
-        df['Customer ID']=df['Customer ID'].fillna(0)                                      #Remplacement dans la colonne Customer ID les NaN par 0
-
-     #renommage des colonnes
-        new_col_names={" MV ":"mv",
-              "category_name_1": "category_name",
-              "Customer Since":"customer_since",
-              "Customer ID":"customer_id",
-              "BI Status":"bi_status"}
-        df=df.rename(new_col_names,axis=1)
-    # changement de types conformes
-        new_col_types={"item_id":"object",
-              "customer_id":"object",
-              "increment_id":"str",
-               'qty_ordered' : 'float'}
-        df=df.astype(new_col_types)
-        
-        return df
 
 
     # TODO: choose between one of these GIFs
