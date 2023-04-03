@@ -2,6 +2,8 @@
 from collections import OrderedDict
 
 import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
 
 -m pip install --upgrade pip
 
