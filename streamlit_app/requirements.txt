@@ -1,4 +1,4 @@
-python -m pip1 --version
+python --version
 # output if installed
 pip 23.0.1
 
