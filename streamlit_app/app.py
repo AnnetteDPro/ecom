@@ -5,7 +5,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
--m pip install --upgrade pip
+
 
 # TODO : change TITLE, TEAM_MEMBERS and PROMOTION values in config.py.
 import config
