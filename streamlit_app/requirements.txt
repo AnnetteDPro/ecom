@@ -1,4 +1,4 @@
-pip install --upgrade pip  
+Upgrade pip wheel bundled with ensurepip (pip 23.0.1) 
 python==23.0.1
 numpy==1.21.2
 pandas==1.4.2
