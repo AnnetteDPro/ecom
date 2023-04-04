@@ -1,7 +1,11 @@
+python -m pip1 --version
+# output if installed
+pip 23.0.1
+
 numpy==1.21.2
 pandas==1.4.2
 streamlit==1.10.0
-python==23.0.1
+
 Pillow==9.1.1
 plotly
 scipy
