@@ -1,19 +1,15 @@
-
-python
-pandas
-streamlit
-
-Pillow
-plotly
-scipy
-matplotlib
-seaborn
-pandas
-Flask
-flask-cors
-pyforest
-ZipFile
 numpy
+pandas
+plotly
+datasets
+Pillow
+streamlit
+streamlit-option-menu
+dataset
+nltk
+scikit-learn
+wordcloud
+tensorflow
  
  
 
