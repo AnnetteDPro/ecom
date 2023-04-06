@@ -1,27 +1,6 @@
 https://www.dropbox.com/s/vtlr8jubvopw4v9/ecom_df_2.csv?dl=1
 # ProjectTemplate
 
-## Instructions à destination des chefs de projet
-
-Ce template permet d'initialiser le repository d'un projet fil rouge dans le cadre de la formation [DataScientest](https://datascientest.com/). Pour ce faire, merci de suivre les instructions suivantes (**chef de projet**):
-
-- Importez (https://github.com/new/import) ce repository (https://github.com/DataScientest-Studio/project-template) dans un nouveau **repository privé dans l'organisation DataScientest-Studio**.
-
-![Import Project](images/import-project-template.png)
-
-- Modifiez le README.md du nouveau projet (vous pouvez le faire directement depuis l'appli web GitHub via l'adresse https://github.com/DataScientest-Studio/NOM_DU_REPO/edit/main/README.md) :
-  - Supprimez la présente section (Instructions à destination des chefs de projet)
-  - Remplacez le titre `# ProjectTemplate` par `# Nom Du Projet`
-- Supprimez l'image d'explication d'importation du repo :
-  https://github.com/DataScientest-Studio/NOM_DU_REPO/delete/main/images/import-project-template.png
-- Vous pouvez désormais ajouter les membres du projet au repo via la page : https://github.com/DataScientest-Studio/NOM_DU_REPO/settings/access
-
-## Explications et Instructions
-
-Ce repository contient les fichiers nécessaires à l'initialisation d'un projet fil-rouge dans le cadre de votre formation [DataScientest](https://datascientest.com/).
-
-Il contient principalement le présent fichier README.md et un template d'application [Streamlit](https://streamlit.io/).
-
 **README**
 
 Le fichier README.md est un élément central de tout repository git. Il permet de présenter votre projet, ses objectifs, ainsi que d'expliquer comment installer et lancer le projet, ou même y contribuer.
