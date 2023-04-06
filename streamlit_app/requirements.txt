@@ -1,6 +1,5 @@
-pip install
---upgrade pip
-python==23.0.1
+
+python==22.0.3
 numpy==1.21.2
 pandas==1.4.2
 streamlit==1.10.0
