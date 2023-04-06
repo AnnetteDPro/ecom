@@ -1,6 +1,0 @@
-pandas==1.2.4
-matplotlib==3.4.2
-
-pip install
-upgrade pip
-python==23.0.1
