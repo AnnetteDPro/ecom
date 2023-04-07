@@ -1,10 +1,15 @@
-
-python
 numpy
 pandas
+plotly
+datasets
+Pillow
 streamlit
-Pillow.
-scipy
+streamlit-option-menu
+dataset
+nltk
+scikit-learn
+wordcloud
+tensorflow
 
 no-deps seasonal
 pmdarima
