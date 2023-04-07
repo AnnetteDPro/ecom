@@ -11,7 +11,3 @@ scikit-learn
 wordcloud
 tensorflow
 
-no-deps seasonal
-pmdarima
-statsmodels
-seasonal_decompose
