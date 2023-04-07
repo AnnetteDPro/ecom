@@ -5,6 +5,3 @@ This repository contains the code for our project **Projet Estimation de ventes 
 
 The goal of this project is to **Sales analyse  with recommendations leading to improved business performance **
 
-This project was developed by the following team :
-
-- Annette Dubus
