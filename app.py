@@ -6,7 +6,7 @@ import streamlit as st
 import config
 
 # TODO : you can (and should) rename and add tabs in the ./tabs folder, and import them here.
-from tabs import DATASET, DataViz, RFM, Kmeans, Prediction
+from ecom import DATASET, DataViz, RFM, Kmeans, Prediction
 
 
 
