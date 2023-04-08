@@ -9,9 +9,13 @@ import matplotlib.pyplot as plt
 title = "Projet Estimation de ventes e-commerce"
 sidebar_name = "DATASET"
 
+<<<<<<< HEAD
+
+=======
 with zipfile.ZipFile("ecom.csv.zip", mode="r") as archive:
 df = archive.getinfo("ecom.csv")   
 
+>>>>>>> 49f1cae473b3fef158583c3388b585c7251b01ab
 def run():
    
 
