@@ -10,4 +10,5 @@ nltk
 scikit-learn
 wordcloud
 tensorflow
+seaborn
 
