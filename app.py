@@ -4,6 +4,8 @@ import streamlit as st
 
 # TODO : change TITLE, TEAM_MEMBERS and PROMOTION values in config.py.
 import config
+
+import tabs
 from tabs.DATASET import DATASET
 from tabs.DataViz import DataViz
 from tabs.RFM import RFM
