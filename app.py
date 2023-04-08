@@ -5,8 +5,6 @@ import streamlit as st
 # TODO : change TITLE, TEAM_MEMBERS and PROMOTION values in config.py.
 import config
 
-# TODO : you can (and should) rename and add tabs in the ./tabs folder, and import them here.
-from main import DATASET, DataViz, RFM, Kmeans, Prediction
 
 
 
