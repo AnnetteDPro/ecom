@@ -15,6 +15,10 @@ with zipfile.ZipFile("ecom.zip", mode="r") as archive:
     with archive.open("ecom.csv") as f:
         df = f.read() 
 
+with zipfile.ZipFile("Pakistan Largest Ecommerce Dataset.zip", mode="r") as archive:
+    with archive.open("Pakistan Largest Ecommerce Dataset.csv") as d:
+        df1 = d.read()
+
 
 def run():
    
