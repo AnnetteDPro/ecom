@@ -11,7 +11,7 @@ sidebar_name = "DATASET"
 
 import zipfile
 
-with zipfile.ZipFile("ecom.csv.zip", mode="r") as archive:
+with zipfile.ZipFile("ecom.zip", mode="r") as archive:
     with archive.open("ecom.csv") as f:
         df = f.read() 
 
