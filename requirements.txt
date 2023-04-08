@@ -11,6 +11,4 @@ scikit-learn
 wordcloud
 tensorflow
 seaborn
-plotly.graph_objects
 
-matplotlib.pyplot
