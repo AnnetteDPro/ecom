@@ -9,12 +9,6 @@ import matplotlib.pyplot as plt
 title = "Projet Estimation de ventes e-commerce"
 sidebar_name = "DATASET"
 
-import tabs
-from tabs.DATASET import DATASET
-from tabs.DataViz import DataViz
-from tabs.RFM import RFM
-from tabs.Kmeans import Kmeans
-from tabs.Prediction import Prediction
 
 
 def run():
