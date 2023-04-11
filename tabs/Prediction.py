@@ -33,7 +33,7 @@ Nous avons créé le DataFrame des ventes, qui représente la série temporelle 
     )
     @st.cache (allow_output_mutation=True)
     def prev_data ():
-        df_2 = pd.read_csv("ecom_df_2.csv")    
+        df_2 = pd.read_csv("https://www.dropbox.com/s/vtlr8jubvopw4v9/ecom_df_2.csv?dl=1")   
         df_2["created_at"]=pd.to_datetime(df_2["created_at"])
         df_gr = df_2['qty_ordered'].groupby(df_2['created_at']).agg('sum')
         df_prev = pd.DataFrame(list(df_gr.items()), columns=['created_at', 'qty_ordered'])

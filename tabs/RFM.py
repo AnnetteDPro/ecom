@@ -17,7 +17,7 @@ import plotly.express as px
 
 
 def run():
-    df_2 = pd.read_csv("ecom_df_2.csv")    
+    df_2 = pd.read_csv("https://www.dropbox.com/s/vtlr8jubvopw4v9/ecom_df_2.csv?dl=1")    
     st.title(title)
     
     st.markdown(
