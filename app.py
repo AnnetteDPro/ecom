@@ -19,16 +19,7 @@ st.markdown(f"<style>{style}</style>", unsafe_allow_html=True)
 # TODO: add new and/or renamed tab in this ordered dict by
 # passing the name in the sidebar as key and the imported tab
 # as value as follow :
-tabs = OrderedDict(
-    [
-        (DATASET.sidebar_name, DATASET),
-        (DataViz.sidebar_name, DataViz),
-        (RFM.sidebar_name, RFM),
-        (Kmeans.sidebar_name, Kmeans),
-        (Prediction.sidebar_name, Prediction),
-        
-    ]
-)
+
 
 
 def run():
@@ -44,10 +35,4 @@ def run():
     for member in config.TEAM_MEMBERS:
         st.sidebar.markdown(member.sidebar_markdown(), unsafe_allow_html=True)
 
-    tab = tabs[tab_name]
-
-    tab.run()
-
- 
-if __name__ == "__main__":
-    run()
+   
