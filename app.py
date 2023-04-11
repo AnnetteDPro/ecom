@@ -35,4 +35,10 @@ def run():
     for member in config.TEAM_MEMBERS:
         st.sidebar.markdown(member.sidebar_markdown(), unsafe_allow_html=True)
 
-   
+    tab = tabs[tab_name]
+
+    tab.run()
+
+ 
+if __name__ == "__main__":
+    run()
