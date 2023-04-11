@@ -6,11 +6,8 @@ import streamlit as st
 import config
 
 import tabs
-from tabs.DATASET import DATASET
-from tabs.DataViz import DataViz
-from tabs.RFM import RFM
-from tabs.Kmeans import Kmeans
-from tabs.Prediction import Prediction
+from tabs import DATASET, DataViz, RFM, Kmeans, Prediction
+
 
 st.set_page_config(
     page_title=config.TITLE,
