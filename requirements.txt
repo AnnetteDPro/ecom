@@ -13,6 +13,6 @@ tensorflow
 seaborn
 statsmodels
 bokeh
-bokeh.plotting
+
 datetime
 
