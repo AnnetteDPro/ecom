@@ -1,4 +1,4 @@
-ort pandas as pd
+import pandas as pd
 import numpy as np
 from PIL import Image
 import plotly.graph_objects as go
@@ -86,87 +86,4 @@ df=df.astype(new_col_types)
     if st.checkbox('Afficher mon code'):    
         st.code(code, language='python')
         
-    
- 
-
-    st.header("""
-    
-    Les variables analisé:
-
-        """
-    ) 
-
-    st.subheader("""
-    
-    CATEGORY NAME
-
-        """
-    ) 
-    
-    
-    st.markdown(
-        """
-L'entreprise propose les produits des catégories très variés : 
- 
-         """
-    )
-            
-    fig, ax = plt.subplots()
-
-    plt.title(label='Catégorie par quantité des commandes ', fontsize=24)
-    sns.countplot(x=df["category_name"], data=df, palette="cividis", order = df.category_name.value_counts().index)
-    plt.xticks(rotation=90)
-    plt.xlabel('Catégory', fontsize=16)
-    plt.ylabel('Quantité des commandes', fontsize=16)
-    st.pyplot(fig)
-    
-    st.markdown(
-        """    
-    
-    Au niveau des ventes, nous observons la dominance des certaines catégories par CA Mobiles&Tabletes, Computing, Entraînement et Appliance ou par quantité de ventes les produits de mode pour hommes et femme, Mobiles&Tabletes, produits de beauté et Appliance. Ce constat peut être la base de notre stratégie marketing avec le choix de positionnement sur le marché et les actions des ventes plus particulières par catégorie. Ici, l'analyse de coût et la marge peuvent nous donner plus d'informations.
-
-         """
-    )
-    
-    st.subheader("""
-    
-    STATUS
-
-        """
-    ) 
-    
-    
-    fig, ax = plt.subplots()
-
-    plt.title(label='Status par quantité des commandes ', fontsize=24)
-    sns.countplot(x="status", data=df1, palette="cividis", order = df1.status.value_counts().index)
-    plt.xticks(rotation=90)
-    plt.xlabel('status', fontsize=16)
-    plt.ylabel('Quantité des commandes', fontsize=16)
-
-    st.pyplot(fig)
-    
-    
-    
-    st.markdown(
-        """
- Nous avons plus de 10 statuts similaire la groupage va faciliter notre analyse :
- 
-         """
-    )
-    st.markdown(
-        """
-**Complété** = Completed (complete, received, cod, paid, closed, exchange) -54%
-     """
-    )
-    st.markdown(
-        """
-**Annulé** = Canceled (canceled, order_refunded, refund, fraud)  -46%    """ 
-    )
-    st.markdown(
-        """
-**En cours** = Pending (payement_review, pending, processing, holded, pending_paypal) -0,03%
-
-        """
-    )
-  
+   
