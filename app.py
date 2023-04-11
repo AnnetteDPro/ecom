@@ -5,6 +5,8 @@ import streamlit as st
 # TODO : change TITLE, TEAM_MEMBERS and PROMOTION values in config.py.
 import config
 
+import tabs
+from tabs import DATASET, DataViz, RFM, Kmeans, Prediction
 
 st.set_page_config(
     page_title=config.TITLE,
@@ -20,7 +22,7 @@ st.markdown(f"<style>{style}</style>", unsafe_allow_html=True)
 # TODO: add new and/or renamed tab in this ordered dict by
 # passing the name in the sidebar as key and the imported tab
 # as value as follow :
-TABS = OrderedDict(
+tabs = OrderedDict(
     [
         (DATASET.sidebar_name, DATASET),
         (DataViz.sidebar_name, DataViz),
@@ -37,7 +39,7 @@ def run():
         "https://studio.datascientest.com/static/images/logo_header.svg",
         width=300,
     )
-    tab_name = st.sidebar.radio("", list(TABS.keys()), 0)
+    tab_name = st.sidebar.radio("", list(tabs.keys()), 0)
     st.sidebar.markdown("---")
     st.sidebar.markdown(f"## {config.PROMOTION}")
 
@@ -45,7 +47,7 @@ def run():
     for member in config.TEAM_MEMBERS:
         st.sidebar.markdown(member.sidebar_markdown(), unsafe_allow_html=True)
 
-    tab = TABS[tab_name]
+    tab = tabs[tab_name]
 
     tab.run()
 
