@@ -5,7 +5,8 @@ import streamlit as st
 # TODO : change TITLE, TEAM_MEMBERS and PROMOTION values in config.py.
 import config
 
-
+import tabs
+from tabs import DATASET, DataViz, RFM, Kmeans, Prediction
 
 st.set_page_config(
     page_title=config.TITLE,
