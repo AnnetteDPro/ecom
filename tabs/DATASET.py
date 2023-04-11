@@ -9,8 +9,7 @@ import matplotlib.pyplot as plt
 title = "Projet Estimation de ventes e-commerce"
 sidebar_name = "DATASET"
 
-df = pd.read_csv("https://www.dropbox.com/s/vtlr8jubvopw4v9/ecom_df_2.csv?dl=1")
-df1 = pd.read_csv("https://www.dropbox.com/s/4zy7dmd6dc9ccjo/Pakistan%20Largest%20Ecommerce%20Dataset.csv?dl=1")
+
 
 def run():
    
@@ -84,88 +83,4 @@ df=df.astype(new_col_types)
         st.code(code, language='python')
         
     
-    
-
-    st.header("""
-    
-    Les variables analysées:
-
-        """
-    ) 
-
-    st.subheader("""
-    
-    CATEGORIES
-
-        """
-    ) 
-    
-    
-    st.markdown(
-        """
-L'entreprise propose des produits et des catégories très variés : 
- 
-         """
-    )
-            
-    fig, ax = plt.subplots()
-
-    plt.title(label='Quantités par catégories des commandes ', fontsize=24)
-    sns.countplot(x=df["category_name"], data=df, palette="cividis", order = df.category_name.value_counts().index)
-    plt.xticks(rotation=90)
-    plt.xlabel('Catégorie', fontsize=16)
-    plt.ylabel('Quantité', fontsize=16)
-    st.pyplot(fig)
-    
-    st.markdown(
-        """    
-    
-    Au niveau des ventes, nous observons la dominance de certaines catégories/ Mobiles&Tabletes, Computing, Entraînement et Appliance. Si nous regardons quantité de ventes les produits de mode pour hommes et femme, Mobiles&Tabletes, produits de beauté et Appliance. Ce constat peut être la base de notre stratégie marketing avec le choix de positionnement sur le marché et les actions des ventes plus particulières par catégorie. Ici, nous ne pouvons pas analyser la marge puisque cette information n'est pas donnée.
-
-         """
-    )
-    
-    st.subheader("""
-    
-    STATUS
-
-        """
-    ) 
-    
-    
-    fig, ax = plt.subplots()
-
-    plt.title(label='Quantité par status des commandes ', fontsize=24)
-    sns.countplot(x="status", data=df1, palette="cividis", order = df1.status.value_counts().index)
-    plt.xticks(rotation=90)
-    plt.xlabel('status', fontsize=16)
-    plt.ylabel('Quantité des commandes', fontsize=16)
-
-    st.pyplot(fig)
-    
-    
-    
-    st.markdown(
-        """
- Nous avons plus de 10 statuts similaires, ce groupage va faciliter notre analyse :
- 
-         """
-    )
-    st.markdown(
-        """
-**Complété** = Completed (complete, received, cod, paid, closed, exchange) -54%
-     """
-    )
-    st.markdown(
-        """
-**Annulé** = Canceled (canceled, order_refunded, refund, fraud)  -46%    """ 
-    )
-    st.markdown(
-        """
-**En cours** = Pending (payement_review, pending, processing, holded, pending_paypal) -0,03%
-
-        """
-    )
-
-
-  
+   
