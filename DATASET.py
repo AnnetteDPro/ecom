@@ -10,7 +10,7 @@ title = "Projet Estimation de ventes e-commerce"
 sidebar_name = "DATASET"
 
 import DATASET
-from tabs.DataViz import DataViz
+
 
 df = pd.read_csv("https://www.dropbox.com/s/vtlr8jubvopw4v9/ecom_df_2.csv?dl=1")
 df1 = pd.read_csv("https://www.dropbox.com/s/4zy7dmd6dc9ccjo/Pakistan%20Largest%20Ecommerce%20Dataset.csv?dl=1")
