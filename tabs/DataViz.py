@@ -146,6 +146,8 @@ La distribution des ventes par catégorie est suivante:
     df_nombre_cde = pd.crosstab(df_2['M-Y'], df_2['category_name'])
     
     import datetime
+    import bokeh
+
     from bokeh.plotting import figure, show, output_notebook
     output_notebook()
     from bokeh.models import  LabelSet, ColumnDataSource

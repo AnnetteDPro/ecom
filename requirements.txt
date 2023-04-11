@@ -12,4 +12,5 @@ wordcloud
 tensorflow
 seaborn
 statsmodels
+bokeh
 
