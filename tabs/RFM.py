@@ -74,6 +74,7 @@ def run():
         return RFM
         
     RFM = rfm()
+    
     seg = RFM['Segment'].value_counts()
     st.markdown(
         """
