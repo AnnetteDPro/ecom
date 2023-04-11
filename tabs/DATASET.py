@@ -9,16 +9,8 @@ import matplotlib.pyplot as plt
 title = "Projet Estimation de ventes e-commerce"
 sidebar_name = "DATASET"
 
-import zipfile
-
-with zipfile.ZipFile("ecom.zip", mode="r") as archive:
-    with archive.open("ecom.csv") as f:
-        df = f.read() 
-
-with zipfile.ZipFile("Pakistan Largest Ecommerce Dataset.zip", mode="r") as archive:
-    with archive.open("Pakistan Largest Ecommerce Dataset.csv") as d:
-        df1 = d.read()
-
+df = pd.read_csv("https://www.dropbox.com/s/vtlr8jubvopw4v9/ecom_df_2.csv?dl=1")
+df1 = pd.read_csv("https://www.dropbox.com/s/4zy7dmd6dc9ccjo/Pakistan%20Largest%20Ecommerce%20Dataset.csv?dl=1")
 
 def run():
    
