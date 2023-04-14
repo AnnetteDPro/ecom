@@ -82,7 +82,7 @@ La date du dernier achat. Notez bien que l’on part du principe qu’une person
     )
     
       
-    @st.cache_data(allow_output_mutation=True)
+
     def rfm ():
     
         from datetime import datetime
