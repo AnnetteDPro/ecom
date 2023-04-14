@@ -28,7 +28,7 @@ def run():
    
 
     st.title("Jeu de données initiales")
-    rfm=pd.read_csv('rfm_kmeans.csv',index_col="CustomerID")
+    rfm=pd.read_csv("https://www.dropbox.com/s/t0olw09dm0u2kr7/rfm_kmeans.csv?dl=1")
     rfm_num=rfm[["Recency","Frequency","Monetary"]]
     scaler=MinMaxScaler()
     Z=pd.DataFrame(scaler.fit_transform(rfm[["Recency","Frequency","Monetary"]]),columns=["Recency","Frequency","Monetary"])
