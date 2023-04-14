@@ -38,8 +38,7 @@ def run():
 
  - Prédire des résultats raisonnables
 """)
-
-    
+ 
     
   
     st.markdown(
@@ -49,18 +48,18 @@ Cela est possible grâce à la détermination de quatre quartiles pour la récen
 
     st.markdown(
         """    
- - **Champion** : Acheté récemment, achète souvent et dépense le plus""")
+ - **Champion** : Acheté récemment, achète souvent et dépense le plus"""
+      )
 
     st.markdown(
         """
  - **Clients fidèles** : Dépense beaucoup d'argent. Réactif aux promotions."""
-
-)
+      )
     st.markdown(
         """
 
  - **Client Prometteur** : Acheteurs récents, mais qui n'ont pas dépensé beaucoup.
-""")
+    """)
     
     st.markdown(
         """
