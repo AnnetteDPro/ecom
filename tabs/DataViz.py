@@ -149,9 +149,7 @@ La distribution des ventes par catégorie est suivante:
     
 
     from bokeh.plotting import figure, show, output_notebook
-
-    from bokeh.models import  LabelSet, ColumnDataSource
-    from bokeh.models import Range1d, OpenURL, TapTool, HoverTool, DatetimeTickFormatter
+    from bokeh.io import output_file
     from bokeh.transform import linear_cmap
     from datetime import datetime
     from bokeh.models import BoxAnnotation
@@ -163,11 +161,7 @@ La distribution des ventes par catégorie est suivante:
 
     p = figure(width=1100,height=400, x_axis_type='datetime',
            title = "Evolution des ventes par mois")
-    hover = HoverTool(
-        tooltips=[
-            ("date", '@x{%Y-%m-%d}'),            
-            ("Qty", "@y")],
-            formatters={'@x' : 'datetime'})
+
             
      
     p.line(x = df_nombre_cde.index, y=df_nombre_cde['Mobiles & Tablets'], color='blue', line_width=2, legend_label='Mobiles & Tablets')
@@ -179,7 +173,7 @@ La distribution des ventes par catégorie est suivante:
     p.line(x = df_nombre_cde.index, y=df_nombre_cde["Women's Fashion"], color='rosybrown', line_width=2, legend_label="Women's Fashion")
     p.line(x = df_nombre_cde.index, y=df_nombre_cde['Others'], line_width=2, color='lawngreen', legend_label='Others')
 
-    p.add_tools(hover)
+  
     p.legend.click_policy = 'hide'
 
     box_left = pd.to_datetime('2017-10-01-')
