@@ -89,8 +89,7 @@ La date du dernier achat. Notez bien que l’on part du principe qu’une person
  
         df_2["created_at"]= pd.to_datetime(df_2["created_at"]) #transformation en type date
         reference_date= pd.to_datetime('30/8/2018')            #on va partir sur analyse à la fin de périod
-        RFM_recence = df_2
-        RFM_recence = RFM_recence.groupby(by = 'customer_id', as_index=False)["created_at"].max() #groupage par customer et max date
+        RFM_recence = df_2.groupby(by = 'customer_id', as_index=False)["created_at"].max() #groupage par customer et max date
         RFM_recence.columns = ['customer_id', 'max_Date'] #creation DataFrame par ID avec la date du dernier achat
         RFM_recence['Recence'] = RFM_recence['max_Date'].apply(lambda row: (reference_date - row).days)  #calcule de recence 
         RFM_recence.drop('max_Date', inplace =True, axis = 1)
