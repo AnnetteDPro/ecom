@@ -8,9 +8,6 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import numpy as np   
 
-%matplotlib inline 
-
-
 title = "DataViz"
 sidebar_name = "DataViz"
 
