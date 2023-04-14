@@ -4,8 +4,13 @@ import numpy as np
 from PIL import Image
 import plotly.graph_objects as go
 import seaborn as sns
+%matplotlib inline 
 import matplotlib.pyplot as plt
 import plotly.express as px
+import numpy as np   
+
+%matplotlib inline 
+
 
 title = "DataViz"
 sidebar_name = "DataViz"
