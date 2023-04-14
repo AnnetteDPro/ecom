@@ -145,51 +145,16 @@ La distribution des ventes par catégorie est suivante:
     df_2['M-Y'] = pd.to_datetime(df_2['M-Y'])
     df_nombre_cde = pd.crosstab(df_2['M-Y'], df_2['category_name'])
     
-    import datetime
-    
+   # Evolution des ventes par mois selon "M-Y"
 
-    from bokeh.plotting import figure, show, output_notebook
-    from bokeh.io import output_file
- n  from bokeh.models import  LabelSet, ColumnDataSource
+df_nombre_cde = pd.crosstab(df['M-Y'], df['category_name_1'])
+df_nombre_cde.plot(figsize = (20, 15), legend = True)
+plt.title(label='Evolution des ventes par mois', fontsize=24)
+plt.xlabel('Anneé-Mois')
+plt.ylabel('Quantité des commandes')
 
-    from datetime import datetime
-    from bokeh.models import BoxAnnotation
-    from bokeh.plotting import figure
-    
-     
-    source = ColumnDataSource(df_nombre_cde)
+plt.show()
 
-
-    p = figure(width=1100,height=400, x_axis_type='datetime',
-           title = "Evolution des ventes par mois")
-
-            
-     
-    p.line(x = df_nombre_cde.index, y=df_nombre_cde['Mobiles & Tablets'], color='blue', line_width=2, legend_label='Mobiles & Tablets')
-    p.line(x = df_nombre_cde.index, y=df_nombre_cde['Appliances'], line_width=2, color='red', legend_label='Appliances')
-    p.line(x = df_nombre_cde.index, y=df_nombre_cde['Computing'], color='steelblue', line_width=2, legend_label='Computing')
-    p.line(x = df_nombre_cde.index, y=df_nombre_cde['Superstore'], line_width=2, color='yellow', legend_label='Superstore')
-    p.line(x = df_nombre_cde.index, y=df_nombre_cde['Entertainment'], color='orange', line_width=2, legend_label='Entertainment')
-    p.line(x = df_nombre_cde.index, y=df_nombre_cde["Men's Fashion"], line_width=2, color='purple', legend_label="Men's Fashion")
-    p.line(x = df_nombre_cde.index, y=df_nombre_cde["Women's Fashion"], color='rosybrown', line_width=2, legend_label="Women's Fashion")
-    p.line(x = df_nombre_cde.index, y=df_nombre_cde['Others'], line_width=2, color='lawngreen', legend_label='Others')
-
-  
-    p.legend.click_policy = 'hide'
-
-    box_left = pd.to_datetime('2017-10-01-')
-    box_right = pd.to_datetime('2017-12-01')
-
-
-    box = BoxAnnotation(left=box_left, right=box_right,
-                    line_width=1, line_color='black', line_dash='dashed',
-                    fill_alpha=0.2, fill_color='orange')
-
-    p.add_layout(box)
-
-    st.bokeh_chart(p, use_container_width=True)
-    
-    
     st.markdown("""
         Nous pouvons voir le pic en Novembre pour presque toutes les catégories et une petite augmentation en Mars, Avril, Mai pour certaines catégories. Regardons les ventes par jour et mois :  
 
