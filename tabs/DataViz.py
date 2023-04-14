@@ -147,13 +147,13 @@ La distribution des ventes par catégorie est suivante:
     
    # Evolution des ventes par mois selon "M-Y"
 
-df_nombre_cde = pd.crosstab(df['M-Y'], df['category_name_1'])
-df_nombre_cde.plot(figsize = (20, 15), legend = True)
-plt.title(label='Evolution des ventes par mois', fontsize=24)
-plt.xlabel('Anneé-Mois')
-plt.ylabel('Quantité des commandes')
+   df_nombre_cde = pd.crosstab(df['M-Y'], df['category_name_1'])
+   df_nombre_cde.plot(figsize = (20, 15), legend = True)
+   plt.title(label='Evolution des ventes par mois', fontsize=24)
+   plt.xlabel('Anneé-Mois')
+   plt.ylabel('Quantité des commandes')
 
-plt.show()
+   plt.show()
 
     st.markdown("""
         Nous pouvons voir le pic en Novembre pour presque toutes les catégories et une petite augmentation en Mars, Avril, Mai pour certaines catégories. Regardons les ventes par jour et mois :  
