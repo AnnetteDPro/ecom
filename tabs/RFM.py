@@ -114,7 +114,7 @@ La date du dernier achat. Notez bien que l’on part du principe qu’une person
         
     RFM = rfm()
     seg = RFM['Segment'].value_counts()
-     seg = RFM['Segment'].value_counts()
+
     st.markdown(
         """
 Nous allons ainsi identifier plusieurs typologies de clients (les champions, les clients fidèles, les clients Prometteur, les clients perdus…) et les séparer complètement des clients inactifs. Cela est possible grâce à la détermination quatre quartiles pour la récence, la fréquence et le montant. La segmentation :""")
