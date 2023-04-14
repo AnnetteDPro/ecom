@@ -147,7 +147,7 @@ La distribution des ventes par catégorie est suivante:
     
    # Evolution des ventes par mois selon "M-Y"
 
-   df_nombre_cde = pd.crosstab(df['M-Y'], df['category_name_1'])
+
    df_nombre_cde.plot(figsize = (20, 15), legend = True)
    plt.title(label='Evolution des ventes par mois', fontsize=24)
    plt.xlabel('Anneé-Mois')
