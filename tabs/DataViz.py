@@ -150,7 +150,8 @@ La distribution des ventes par catégorie est suivante:
 
     from bokeh.plotting import figure, show, output_notebook
     from bokeh.io import output_file
-    from bokeh.transform import linear_cmap
+ n  from bokeh.models import  LabelSet, ColumnDataSource
+
     from datetime import datetime
     from bokeh.models import BoxAnnotation
     from bokeh.plotting import figure
