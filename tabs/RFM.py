@@ -114,3 +114,4 @@ La date du dernier achat. Notez bien que l’on part du principe qu’une person
         return RFM
         
     RFM = rfm()
+    seg = RFM['Segment'].value_counts()
