@@ -32,10 +32,7 @@ Pour le moment, cela reste des chiffres ou des informations brutes. La deuxième
     
 
     df_2 = pd.read_csv("https://www.dropbox.com/s/vtlr8jubvopw4v9/ecom_df_2.csv?dl=1")
-    date_string = "2021-08-25 00:00:00.000000000"
-    date_object = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S.%f")
-
-    formatted_date = date_object.strftime("%Y-%m-%d")
+   
      
     df_2["created_at"] = pd.to_datetime(df_2["created_at"])
         
