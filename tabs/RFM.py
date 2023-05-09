@@ -17,7 +17,7 @@ import plotly.express as px
 
 
 def run():
-    df_2 = pd.read_csv("https://www.dropbox.com/s/vtlr8jubvopw4v9/ecom_df_2.csv?dl=1", format='ISO8601')    
+    df_2 = pd.read_csv("https://www.dropbox.com/s/vtlr8jubvopw4v9/ecom_df_2.csv?dl=1")    
     st.title(title)
     
     st.markdown(
@@ -87,7 +87,7 @@ La date du dernier achat. Notez bien que l’on part du principe qu’une person
     
         from datetime import datetime
  
-        df_2["created_at"]= pd.to_datetime(df_2["created_at"]) #transformation en type date
+        df_2["created_at"]= pd.to_datetime(df_2["created_at", format='ISO8601']) #transformation en type date
         reference_date= pd.to_datetime('30/8/2018')            #on va partir sur analyse à la fin de périod
         RFM_recence = df_2.groupby(by = 'customer_id', as_index=False)["created_at"].max() #groupage par customer et max date
         RFM_recence.columns = ['customer_id', 'max_Date'] #creation DataFrame par ID avec la date du dernier achat
