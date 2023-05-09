@@ -40,7 +40,7 @@ def run():
     st.dataframe(rfm.head())
     fig1 =plt.figure(figsize=(15,7))
     for index, column in enumerate(rfm.select_dtypes("number").columns):
-        plt.subplot(1,6,(index+1))
+        plt.subplot(0,6,(index+1))
         plt.boxplot(rfm[column]) 
         plt.xlabel(column)
     st.pyplot(fig1)
