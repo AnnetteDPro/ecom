@@ -8,6 +8,11 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import numpy as np   
 
+from datetime import datetime
+
+date_string = "2021-08-25 00:00:00.000000000"
+date_object = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S.%f")
+
 title = "DataViz"
 sidebar_name = "DataViz"
 
