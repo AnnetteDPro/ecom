@@ -37,7 +37,7 @@ Nous avons créé le DataFrame des ventes, qui représente la série temporelle 
         df_2["created_at"] = pd.to_datetime(df_2["created_at"], format='ISO8601')
         df_gr = df_2['qty_ordered'].groupby(df_2['created_at']).agg('sum')
         df_prev = pd.DataFrame(list(df_gr.items()), columns=['created_at', 'qty_ordered'])
-        df_prev['created_at'] = pd.to_datetime(df_prev['created_at'], format='ISO8601)
+        df_prev['created_at'] = pd.to_datetime(df_prev['created_at'], format='ISO8601')
         
        
         return df_prev
