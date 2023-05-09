@@ -29,7 +29,8 @@ Pour le moment, cela reste des chiffres ou des informations brutes. La deuxième
 
     df_2 = pd.read_csv("https://www.dropbox.com/s/vtlr8jubvopw4v9/ecom_df_2.csv?dl=1")
  
-
+     
+    df_2["created_at"] = pd.to_datetime(df_2["created_at"])
         
       
     st.markdown("""
