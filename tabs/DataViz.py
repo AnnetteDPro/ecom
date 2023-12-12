@@ -61,7 +61,7 @@ Pour le moment, cela reste des chiffres ou des informations brutes. La deuxième
     if st.button("Chiffre d'affaires"):
         
         fig, ax = plt.subplots()
-        sns.barplot(x=year.index, y=year.values, palette='Blues_d')
+        sns.barplot(x=year.index, y=year.values, data= year, palette='Blues_d')
         plt.title(label='CA par année  ', fontsize=20);
         plt.xlabel('Year', fontsize=12)
         plt.ylabel("Chiffre d'affaires", fontsize=12)
